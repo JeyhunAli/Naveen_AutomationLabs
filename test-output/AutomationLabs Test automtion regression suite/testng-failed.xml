@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="3" name="Failed suite [AutomationLabs Test automtion regression suite]">
+  <test thread-count="5" verbose="3" name="Welcome Page Test(failed)">
+    <classes>
+      <class name="com.automationlabs.tests.WelcomePageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="closePopUpTest"/>
+          <include name="setUp"/>
+          <include name="verify_learnTechnology_TexTest"/>
+          <include name="verifywelcomepageTitle_Test"/>
+          <include name="verify_naveenAutomationlabs_link_test"/>
+        </methods>
+      </class> <!-- com.automationlabs.tests.WelcomePageTest -->
+    </classes>
+  </test> <!-- Welcome Page Test(failed) -->
+</suite> <!-- Failed suite [AutomationLabs Test automtion regression suite] -->
