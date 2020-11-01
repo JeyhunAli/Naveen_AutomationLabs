@@ -30,3 +30,17 @@ lets say whenever any thread using specific driver it wont disturb another threa
 
 
 and we are running our test cases with different thread 
+
+
+tesult listener is most like feature is maintaining history
+for example everytime u run your test cases its keeping in the history lets say couple 
+days back some test cases were failed but today its passed  u can maintain like that exactly what time what day test cases 
+failed and today what time they are passed 
+
+
+screenshot listener is for testng report lets say there some test cases is failed 
+automatically it takes screenshot 
+
+
+
+
