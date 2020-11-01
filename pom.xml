@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>Automation_Labs</groupId>
-	<artifactId>Automation_Labs</artifactId>
+	<groupId>Naveen_Automation_Labs</groupId>
+	<artifactId>Naveen_Automation_Labs</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Automation_Labs</name>
+	<name>Naveen_Automation_Labs</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -19,7 +19,8 @@
 
 
 
-<build>
+	
+	<build>
 
 		<plugins>
 			<plugin>
@@ -92,8 +93,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.0.0</version>
-			<scope>test</scope>
+			<version>6.14.3</version>
 		</dependency>
 
 		<dependency>
@@ -128,12 +128,12 @@
 			<version>1.0-beta</version>
 		</dependency>
 
-        <dependency>
+		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>3.1.5</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.lowagie</groupId>
 			<artifactId>itext</artifactId>
@@ -152,7 +152,7 @@
 			<version>1.0.2</version>
 		</dependency>
 
-		
+
 
 
 
