@@ -1,0 +1,232 @@
+PART  1
+
+execution and maintenance is part of the contionous integration
+in contionous integration we will se how developers devops and testers they come together to work on project
+contionous integration ---- >> is the proces where devops testers and developers come together to work on a project in order to 
+achieve to excelent result 
+how many ways we cam execute our test cases we know that one of them is testNg we add all the test cases to our testNG.xml file and 
+then we can run them another way is from pom.xml 
+so far we know that pom.xml file is we use only for dependency purpose but also we can run all our test cases through the pom.xml
+the use of the executing our test cases from pom.xml we can do out side of the eclipse as well 
+for testNG eclipse is mandatory but for the pom.xml no.
+pom.xml we can run from  CLI (command line interface)
+another way to execute our test cases through run.bat file  we creating one file the executing
+
+execution 
+1.run test cases with maven pom.xml 
+2run test cases through maven CLI 
+3. RUN TEST CASES THROUGH RUN.BAT FILE 
+4.run test cases using jenkins
+
+WE can run our test cases through jenkins in several way free style, maven project  in free style we can provide with 
+run.bat file then we can execute our test cases 
+for that configuration is more importanat java and maven configuration is necessery without that we cannot execute 
+our test cases in jenkins 
+
+but in real life we dont do any configurtaion we just get url from devops team then we add our project to jebkins   
+
+if first executing failed then no need to run on 2 or 3 
+
+if we want to run our test cases through the pom.xml we have to ad sure fire and compiler plugin to our pom.xml then run make sure 
+when u run you get built success 
+
+if you running first time it gonna give u error to solve that error go to window prefrences add jdk then apply then rerun 
+
+
+
+1 download maven
+2then unzip it then take bin folder add to configure  in computer advanced system to the path 
+then creating in system variable MAVEN_HOME  and M2_HOME AND in environment variable we creating %MAVEN_HOME%  and %M2_HOME%\bin
+its neccessery 
+then 
+mvn -version   in "CLI"
+ copy of location of project from eclipse 
+ cd location of project
+ mvn clean install 
+ 
+ then on windows copy the location then get the extends report 
+ 
+ THEN we can run our test through run.bat file for that we are creating a text document file then name it as 
+ run.bat then edit  cd --> location of project mvn clean install 
+    after that double click on it its gonna run our test frame through the CLI without writing any command in command line 
+ 
+**********************************************************************************************************
+ 
+ Next executing point is jenkins ----------->>>  
+ continous integration 3 important team works together QA, Developers and Devops(development operations) 
+ Devops they are responsible for integrations stuff  they perform certain task to dev and qa 
+ dev is implements the codes by using certain prog language and at the end of the day they keep their code in common repository this calls 
+ check in process once dev integarte thir codes then Devops team picup the codes then they create the built qa directly dont get 
+ the codes from developers,
+  Built is final integrate program its sometimes going to be in exe file or msn or some other file 
+ its just like installer file we get it and install it 
+ and lets move on qa team here also some more people works together once they compleated their automated test cases they are also 
+ check in their codes in common repository then devops team pic up our codes from common repository then they execute it on built
+ here also sanity and smoke test will be compleated 
+ what is sanity basic functionality for example built is properly install or not basic functionaluty works or not 
+ here we are verifying that basic stuff   
+ basically devops team helping to developers and qa in this case the proces becaming to complete faster in agile procces it specialy 
+ becaming faster 
+ devops responsibility is the creating the built automation. when built is succefful pass everybody in the team they get email of that
+ and then qa environmenet install that built in their invaironment and start rest of the functionality
+ sometimes there some bug issues or new features added these kind of the features will be tested in qa envaironment
+ and after its completed again qa team check in their code in common repository 
+ 
+ and in devops envaironment to create built devops using maven and to run our test cases automations they use jenkins 
+ maven and jenkins devops cantinious integration tools basically maven is built automation tool as a tester qa enginer we using not 
+ hundred percent of maven we using up to 10 percent of maven but devops they use all the features of maven by using maven they 
+ create the built
+ and jenkins is tool to run our automation code on the built 
+ once the build is succefful and all our automation codes are executed  then final build will be written in jenkins then we have to 
+ download the jenkins and in our envaironment we have to test next day morning 
+ 
+ 
+ suppose dev team integrated code to the common repo then devops they will run it all night on jenkins after that night 
+ in the morning we are getting email from the devops that built is succeful and downlioad and qa downloding that built 
+  testing  it once is compleated then we check in that code into the common repo if any bug we assighin it to dev then 
+  they work on it assighn it devops to the build they run it on the built if succeful assign back to the qa 
+  qa testing it again if succefful then assign to production 
+  then downloading another build and wrting our automation test cases  these proccess calls continious integration 
+  so as a qa why we use jenkins to execute our test cases  because devops team will automate our test cases only throug the jenkins 
+  our role in this case is to keep our code in common repo then to do some certain configuration on the jenkins 
+  and devops set the time based on that time they will automate our test cases  
+  
+  note when ever our test cases executing on the jenkins in that envaironment we dont see any UI user interface its completaly headless
+  execution headless mean we dont see any UI  ppart we can see all the logs whatever happening in the bacground we can see that
+   of execution but as a user we dont see UI because it doesnt show any UI its faster thats the main feature of jenkins 
+  
+  at working envaironment we usually dont download the jenkins its completaly devops tool they give us some url 
+  we access it by usernmae and password we login the the url then add the our project then doing some configuration 
+  and thats the only one time job 
+  as qa we have to make sure our automation test cases on the common repo then jenkins automatically will picup our code and 
+  execute our test cases 
+  
+  *****************************************************************************************************************************
+  
+  PART 2   Git Github  from command line 
+  both are the different sofware git is window based aplication donwload and install github is available in url format
+   
+  Git Github they are not same   git local repository  everybody have to have local repository 
+  Github is remote repository 
+  
+  Git------>>> is control system used to tracck changes in computer files its a tool to manage yoour code 
+  Github---->>>> is hosting service for git repositories  basically git is tool github is service to use the git 
+  another way GITHUB is central repository or we can say remote repository whhere we can store all our codes 
+  
+  we can save all our complete project in github and if we want to share it just need to provide the person with the url 
+  '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+  during a day everybody works on codes works on automated test cases at the end of the day every changes have to be in common 
+  repository
+  
+  everybody in evaironment they send their codes to the git repository and at the end of the day they send it to the github repository 
+  and from github jenkins will take the code by url  and execute our test script 
+  in every day activity whatever we do some changes or adding some code they have to be in git and github repository 
+  and paralell dev team also do the same they also keep their codes in github then devops team takes the code from there and create build 
+  pre-requeste you have to have github account 
+  then create new repository 
+  normally when name our repository it should be same name as our project name 
+  after naming we choose public or private public is all the time what we use its freely available 
+  but private is not free 
+  usually in some company they use it but mostly public one is more popular 
+  once we create it git is giving us url that Github url is most important we are gonna use it in several places 
+  later on to share this project we will use same url 
+  this is the central repository 
+  
+  next step in local repository    we need to download and install git repository
+  
+  how codes is going to github and back lets see 
+   suppose we complete our test cases all the codes first we send it to git repository and from there to github repository 
+   same thing reverse too if we want to get some code from github first we get it git repo then to the local machine
+    
+2nd--->> command is status every time we have first check status its gonna let us which changes need to add to the stage step which
+is to the github repo 
+
+3rd --->> command add  this command from workspace to the stage we use add comand 
+
+4th---->>> command is commit from stagein to the git repository --- means local repo 
+
+5th---->>> command is push from git repo to the github central repo along with the push we also specify our remote repository url and username
+and password 
+
+but our 1 st---->> command is git init  to create local git repository in our local machine 
+
+ 1st  git init -----  Initialized empty Git repository in C:/Users/Ali-c/eclipse-workspace/TestingConcept/.git/
+ 
+ https://github.com/JeyhunAli/TestingConcept.git url in the github 
+ 
+ 
+2nd ---->>> git remote add origin  "here the link which is on the central repo "  -->>to make a connection between local and central repository 
+
+after this step in command line we do     git status 
+its gonna give us this message ---->>> nothing added to commit but untracked files present (use "git add" to track)
+
+after that what we we have to send all the project or some of them to the staging are how to do that if i want to send all the project 
+git add -A  command  if i want to specific task then git add -here name of that specific thing 
+
+after that  checking status so   git status all the lines have to be green color it means all the files codes packages classes
+they are in staging area   
+
+next common is commit  but before the commit only once only first time we need to execute these below commands
+
+git config --global user.name "Jeyhun Ali"
+git config --global user.email "Ali-ceyhun@list.ru"
+
+git commit -m "write some message"  ----> in this commit -m means any mesaage we have to write relative to our changes or updates according to our code 
+and this command will send all the changes updates or some specific comments or complete project to the local repository 
+once we commited all the files now part of the local repo and color from green turned to the white 
+git push -u origin master  from local to central repo  
+
+
+in every company everybody is gonna use same url not separete url 
+************************************************************************************************************************
+now from github to git repo and then to local machine how to do that 
+
+for that we use    ---------  git pull origin master 
+
+once we did this command then new add or some new updates will come up in our workspace just need to refresh the project 
+
+after that for practicing purpose create some manula file in git central repo  then pull it---  git pull origin master 
+
+then git status 
+refresh your project u will see new changes 
+then add some new updates on your workspace then again do git status all the changes will come up on command line 
+**************************************************************************************************************************************************************
+1st  git init
+2nd ---->>> git remote add origin  "here the link which is on the central repo "  -->>to make a connection between local and central repository 
+  3 --- git status
+ 4 git add -A all the changes to the stage area 
+ git config --global user.name "Jeyhun Ali"
+git config --global user.email "Ali-ceyhun@list.ru"
+git commit -m "write some message"  ----> in this commit -m means any mesaage we have to write relative to our changes or updates according to our code 
+git push -u origin master  from local to central repo  
+**************************************************************************************************************************************************************
+git pull origin master   from central to local           
+git status  --->> see if any update or chagnes 
+git add -A   send to the stages 
+git commit -m " your text here"    
+git push -u origin master  
+
+*********************************************************************************************************************************
+
+once we added all our codes to the central repo time to execte from jenkins so in jenkins we do some configurations adding github url to jenkins 
+if its first time need to provide computer advanced system with the git bin file then good to go execute automation from jenkins
+
+Note : lets say we execute our test cases throug jenkins after that we did some more updates or some more changes then we coming to jenkins of course all the git github proccess
+so inside of the jenkins we dont need to create new new item all thouse thing just need to run same file again and again this is the continous integration concept
+
+*********************************************************************************************************************************
+
+git part 3 from eclipse 
+
+here new topics  branching and merging 
+
+
+
+
+
+
+
+
+
+
+

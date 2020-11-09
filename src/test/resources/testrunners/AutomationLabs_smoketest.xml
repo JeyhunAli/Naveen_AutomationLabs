@@ -13,8 +13,8 @@
 	   
 <!-- 	<listener  class-name="com.automationlabs.listeners.TestAllureListener" />
  -->	   
-	    <listener  class-name="com.automationlabs.listeners.TesultsListener" />
-	    
+<!-- 	    <listener  class-name="com.automationlabs.listeners.TesultsListener" />
+ -->	    
 	    <listener  class-name="com.automationlabs.listeners.ScreenshotListener" />   
 	   
 	</listeners>

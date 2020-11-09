@@ -81,12 +81,7 @@ import org.openqa.selenium.JavascriptExecutor;
 			js.executeScript("arguments[0].scrollIntoView(true);", element);
 		}
 		
-		public void scrollIntoView(By locator) {
-			JavascriptExecutor js = ((JavascriptExecutor) driver);
-			js.executeScript("arguments[0].scrollIntoView(true);", locator);
-		}
-
-		public String getBrowserInfo() {
+        public String getBrowserInfo() {
 			JavascriptExecutor js = ((JavascriptExecutor) driver);
 			String uAgent = js.executeScript("return navigator.userAgent;").toString();
 			return uAgent;

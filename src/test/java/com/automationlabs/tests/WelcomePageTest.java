@@ -34,7 +34,7 @@ public class WelcomePageTest extends BaseTest{
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void clickContactUsButtonTest() {
 		welcomepage.goClickContactUsButton();
 	}

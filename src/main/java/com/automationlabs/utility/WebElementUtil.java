@@ -271,13 +271,13 @@ public class WebElementUtil {
 
 	}
 	
-	public void domoveToElementThen_sendkeys_PAGEDOWN() {
+	public void domoveToElementThen_sendKeyboard_keys_PAGEDOWN() {
         Actions action = new Actions(driver);
 		action.sendKeys(Keys.PAGE_DOWN);
 
 	}
 	
-	public void domoveToElementThen_sendkeys_PAGEUP() {
+	public void domoveToElementThen_sendKeyboard_keys_PAGEUP() {
         Actions action = new Actions(driver);
 		action.sendKeys(Keys.PAGE_UP);
 

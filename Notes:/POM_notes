@@ -1,0 +1,164 @@
+Page object model ----> is automation approach design pattern 
+here we can use DataDriven Framework testNg to write test cases 
+POM consept is lets say we have one appliaction project and we have multiple test cases for example home page ,
+login , registration, search test cases and each and every test cases we have to create java classes if we have hundred 
+test cases we have to 
+create 100 java classes
+
+first we are defining our page layers they are also known as page libraries ---->> login,reg,search pages 
+each and every pages has web elements that web elements also calls object repositories (OR) what is the object repo
+OR ---->> is collection of the all the web elements web objects ------->>under package 
+***************************************************************************
+for each and every page we create another test layer and here we use testNG annotations ------->>under package 
+************************************************************************************
+after that we are crating base class and all our page layers and test classes extending base class 
+so basically base class becoming parent.  page and test classes becaming child classes ------->>under package 
+***************************************************************************************
+in base class all the prerequesting initialazing web driver, properties, page load time, window maximize, delete cookies, implicit
+wait get url  all these common prerequests  
+synchronization---->>> what is synch it means if my script runs faster than web application 
+ we defining in base class  once we defined all these then we using inheritance consept ------->>under package 
+******************************************************************************************
+apart from that we can also create config.properties to define  browser name  , usernmae, password,
+ this calls envaironment variables
+------->>under package 
+***********************************************************************************************************************
+then we  do TDD in our frame work 
+if we need to read the data from excel we store all the data in excel file in order to read the excell file we need apache poi api 
+------->>under package 
+*****************************************************************************************
+then we are creating utility package for our common things for example screenshot , send mail method,
+here we can also define our page load time, then if in our web application any frame that dont allow 
+us to find location of web elements then we define here switch method, basically all the generic methods defining here 
+------->>under package 
+***************************************************************************************************
+another compennet we have automatically creating after executng just need to refresh the project
+  reportfolder  html, testNg, xml, extend report folder 
+
+
+page object model also calls page chaining model why because all the class packages connected to each other 
+in pom we are using java----> to write our codes 
+selenium webdriver -------> to lounch the browser 
+testng to write our test cases , maven , apache poi api to read excel file 
+extend report testNG report,
+ log4j instead of system.setproperty  we use here jenkins , git to maintan to push our code
+ grid parallael testing,  different browsers on different platforms 
+ these are the different technologies we can use in our page object model 
+ 
+ ********************************************************************************************
+ 
+ POM.XML ----------------->>>>>>>>  A Project Object Model or POM is the fundamental unit of work in Maven.
+  It is an XML file that contains information about the project and configuration
+   details used by Maven to build the project. It contains default values for most projects.
+   
+   *********************************************************************************************************
+
+one more notes about testng dependecy once u copy and paste testng dependency    <scope>test->compile</scope> ---- 
+here scope is test just remove test and add compile
+
+
+****************************************************************************************************************
+
+in src main java we are creating all our base backages utilities 
+in src test java we are ceating all our test cases 
+
+once we cretated config package under that we create config.prpeties file in that file we store some gneric data like 
+url, username, password , brwoser   in that file we dont store our test cases data 
+
+
+in Page object model in our base class we have all the base methods lounching browser 
+creting the object of webdriver maximize the screen page load time implicit wait adding url all these we do in base class so later on 
+no need to create it again and again in every test clases 
+
+
+in page object model we create for each and every page java class under page package 
+
+
+in pom each and every test cases have to separated and independed from each others 
+before each end every test cases need to extend base class in order launch the browser and login 
+@Test execute the test 
+and after each test case close the browser  
+***********************************************************************
+
+
+note: in selenium one more annotations have its name is  "@CacheLookup"  this annotations how it works let me explain
+so once we declare @CacheLookup annotations in our script it will create small memory location which is gonna contain element object
+repository basically it will contain some of the locators (xpath, id , name css, ) 
+every time when we will execute our test script it will take lcator from that small memory which is cause to speed up our 
+test executing time 
+when at time of the interview they will ask you about that how you will improve performance of your script test cases 
+answer is just adding @CacheLookup annotations right after my pagefactory 
+
+but theres aothor excepptions in case of some element location changed or updated moved then at time of executing we will get 
+stale element exception error .
+
+*****************************************************************************************
+
+Note: in selenium theres one amazing consept thats call Web Driver Fire Event --->> its for generate selenium action logs
+WebEventListener  interface in selenium 
+how its working so for that under utility package we are creating weblistener class then extending our base class and as well as 
+implementing our webeventlistener interface 
+so what does it do all the actions we have in our scripts like findby, browser, chromelouncing, send keys 
+actionethod, all the clickin xpath everything it will print on the console in proper way so we can easily understand what is 
+actually going on real time while executing our test script
+webdriverfire evenets its very great consept about taking screen shot lets say we have some test cases which is getting fail 
+while execting so with help of webdriverfireevenets we can implements weeventlistener consept then we can write there one great 
+template of scripts about taking screen shot and to our try catch blok need to add our test util class where is our taking screenshot
+actions writted down then its gonnan take screen shot for every failed test cases 
+this is the powerness of selenium and powerness of using page object model designing framework for our applications 
+WebEventListener 
+
+
+bug release  we know before going to the production we know that , 
+bug leakage
+
+
+
+****************************************************************************
+extend report in page objet model is the some amazing feature for that we have to create one pacgake under that package one class 
+then we are going to testng.xml file creating one listener  what that listener does 
+it does listening all the our activity and at the en of executinng based on our activity its 
+genereting one amazing extend.html reporting file  more clear more understandable
+
+
+*********************************************************************************************************
+
+what is the LOG4j ---------->>> purpose of the  log4j to capture the information at time of the executing 
+what is realy going on 
+so at the time of the executing java jvm execute something selenium execute something testNG, Cucumber execute something 
+each and every API doing their job working together on the background 
+and i want to know what is different executing what are the different calls then u can understand clearly each and every 
+step of executing 
+log4j is importand in terms of debugoing the code and in terms what are different diffren failures 
+in terms of to easily check what kind of exceptions i have there 4 level of log4j    
+info;
+warning;
+fatal;
+error;
+to generate log we use apache log4j API
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

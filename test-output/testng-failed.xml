@@ -6,7 +6,7 @@
       <class name="com.automationlabs.tests.MeetingPageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="fillTheMeetingFormTest" invocation-numbers="0 1 2 3"/>
+          <include name="fillTheMeetingFormTest"/>
           <include name="setUp"/>
           <include name="MeetingPageSetUP"/>
         </methods>

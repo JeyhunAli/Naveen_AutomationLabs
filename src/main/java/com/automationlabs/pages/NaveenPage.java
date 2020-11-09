@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.automationlabs.base.BasePage;
+import com.automationlabs.utility.JavaScriptUtil;
 import com.automationlabs.utility.WebElementUtil;
 
 public class NaveenPage extends BasePage {
@@ -13,7 +14,8 @@ public class NaveenPage extends BasePage {
 
 	By NaveenAutomationLabs = By.xpath("//h2/a[text()='Welcome to Naveen AutomationLabs']");
 	By lifeMotto = By.xpath("(//div[@class='post-content entry-content']/p)[2]");
-	//By meeting = By.xpath("//a[text()='Naveen AutomationLabs – Bangalore Meet Up (4th May)']");
+	// By meeting = By.xpath("//a[text()='Naveen AutomationLabs – Bangalore Meet Up
+	// (4th May)']");
 	By meetingLink = By.linkText("Naveen AutomationLabs – Bangalore Meet Up (4th May)");
 
 
@@ -21,6 +23,7 @@ public class NaveenPage extends BasePage {
 
 		this.driver = driver;
 		eleUtil = new WebElementUtil(driver);
+		jsUtil = new JavaScriptUtil(driver);
 
 	}
 
@@ -40,31 +43,24 @@ public class NaveenPage extends BasePage {
 	}
 
 	public WebElement NaveenAutomationLabsLink() {
-	WebElement ele = eleUtil.getElement(NaveenAutomationLabs);
+		WebElement ele = eleUtil.getElement(NaveenAutomationLabs);
 		ele.isDisplayed();
-	    return ele;
+		return ele;
 
 	}
 
 	public String lifeMottoText() {
-     return eleUtil.doGetText(lifeMotto);
-}
+		return eleUtil.doGetText(lifeMotto);
+	}
 
 	public MeetingPage click_and_GO_Meeting() {
-		eleUtil.DoActionClick(meetingLink);
+//		eleUtil.domoveToElementThen_sendKeyboard_keys_PAGEDOWN();
+//		eleUtil.waitForElementToBeVisible(meetingLink, 5);
+	WebElement meetinglink = driver.findElement(meetingLink);
+	jsUtil.scrollIntoView(meetinglink);
+		
+		eleUtil.domoveToElementThen_click(meetingLink);
 		return new MeetingPage(driver);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }
