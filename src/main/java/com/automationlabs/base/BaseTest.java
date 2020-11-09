@@ -28,7 +28,7 @@ public class BaseTest {
 	}
 	
 	
-	@AfterTest(enabled = false)
+	@AfterTest(enabled = true)
 	public void tearDown() {
 		driver.quit();
 	}
