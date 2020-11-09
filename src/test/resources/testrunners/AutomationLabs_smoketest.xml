@@ -6,17 +6,22 @@
 
 
 	<listeners>
-	<!-- 
-	    <listener  class-name="com.automationlabs.listeners.ExtentReportListener" />
-	    
-	    <listener  class-name="com.automationlabs.listeners.pdfListener" /> -->
-	   
-<!-- 	<listener  class-name="com.automationlabs.listeners.TestAllureListener" />
- -->	   
-<!-- 	    <listener  class-name="com.automationlabs.listeners.TesultsListener" />
- -->	    
-	    <listener  class-name="com.automationlabs.listeners.ScreenshotListener" />   
-	   
+
+		<listener
+			class-name="com.automationlabs.listeners.ExtentReportListener" />
+
+	<!-- 	<listener
+			class-name="com.automationlabs.listeners.pdfListener" />
+
+		<listener
+			class-name="com.automationlabs.listeners.TestAllureListener" />
+
+		<listener
+			class-name="com.automationlabs.listeners.TesultsListener" />
+
+		<listener
+			class-name="com.automationlabs.listeners.ScreenshotListener" /> -->
+
 	</listeners>
 
 

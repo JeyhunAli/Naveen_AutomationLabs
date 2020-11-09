@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="1" total="8" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="45773" started-at="2020-11-02T23:58:47 EST" finished-at="2020-11-02T23:59:33 EST">
+  <suite name="AutomationLabs Test automtion regression suite" duration-ms="42441" started-at="2020-11-09T12:21:57 EST" finished-at="2020-11-09T12:22:40 EST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="45773" started-at="2020-11-02T23:58:47 EST" finished-at="2020-11-02T23:59:33 EST">
-      <class name="com.automationlabs.tests.MeetingPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.automationlabs.tests.MeetingPageTest@a7e2d9d]" name="setUp" is-config="true" duration-ms="13841" started-at="2020-11-02T23:58:47 EST" finished-at="2020-11-02T23:59:01 EST">
+    <test name="Naveen Page Test" duration-ms="22062" started-at="2020-11-09T12:21:57 EST" finished-at="2020-11-09T12:22:19 EST">
+      <class name="com.automationlabs.tests.NaveenPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.automationlabs.tests.NaveenPageTest@2d691f3d]" name="setUp" is-config="true" duration-ms="8943" started-at="2020-11-09T12:21:58 EST" finished-at="2020-11-09T12:22:06 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="MeetingPageSetUP()[pri:0, instance:com.automationlabs.tests.MeetingPageTest@a7e2d9d]" name="MeetingPageSetUP" is-config="true" duration-ms="6756" started-at="2020-11-02T23:59:01 EST" finished-at="2020-11-02T23:59:08 EST">
+        <test-method status="PASS" signature="NavenPageSetUP()[pri:0, instance:com.automationlabs.tests.NaveenPageTest@2d691f3d]" name="NavenPageSetUP" is-config="true" duration-ms="7211" started-at="2020-11-09T12:22:07 EST" finished-at="2020-11-09T12:22:14 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavenPageSetUP -->
+        <test-method status="PASS" signature="Link_NaveenAutomationLabs_Test()[pri:0, instance:com.automationlabs.tests.NaveenPageTest@2d691f3d]" name="Link_NaveenAutomationLabs_Test" duration-ms="146" started-at="2020-11-09T12:22:14 EST" finished-at="2020-11-09T12:22:14 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Link_NaveenAutomationLabs_Test -->
+        <test-method status="PASS" signature="NaveenPageTitleTest()[pri:0, instance:com.automationlabs.tests.NaveenPageTest@2d691f3d]" name="NaveenPageTitleTest" duration-ms="5010" started-at="2020-11-09T12:22:14 EST" finished-at="2020-11-09T12:22:19 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NaveenPageTitleTest -->
+        <test-method status="PASS" signature="click_and_GO_Meeting_Test()[pri:0, instance:com.automationlabs.tests.NaveenPageTest@2d691f3d]" name="click_and_GO_Meeting_Test" duration-ms="433" started-at="2020-11-09T12:22:19 EST" finished-at="2020-11-09T12:22:19 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_and_GO_Meeting_Test -->
+      </class> <!-- com.automationlabs.tests.NaveenPageTest -->
+    </test> <!-- Naveen Page Test -->
+    <test name="Meeting Page Test" duration-ms="42441" started-at="2020-11-09T12:21:57 EST" finished-at="2020-11-09T12:22:40 EST">
+      <class name="com.automationlabs.tests.MeetingPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.automationlabs.tests.MeetingPageTest@60c16548]" name="setUp" is-config="true" duration-ms="9167" started-at="2020-11-09T12:21:57 EST" finished-at="2020-11-09T12:22:06 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="MeetingPageSetUP()[pri:0, instance:com.automationlabs.tests.MeetingPageTest@60c16548]" name="MeetingPageSetUP" is-config="true" duration-ms="7768" started-at="2020-11-09T12:22:07 EST" finished-at="2020-11-09T12:22:14 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MeetingPageSetUP -->
-        <test-method status="PASS" signature="fillTheMeetingFormTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.automationlabs.tests.MeetingPageTest@a7e2d9d]" name="fillTheMeetingFormTest" duration-ms="6388" started-at="2020-11-02T23:59:09 EST" data-provider="getTestDataTest" finished-at="2020-11-02T23:59:15 EST">
+        <test-method status="PASS" signature="fillTheMeetingFormTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.automationlabs.tests.MeetingPageTest@60c16548]" name="fillTheMeetingFormTest" duration-ms="6575" started-at="2020-11-09T12:22:15 EST" data-provider="getTestDataTest" finished-at="2020-11-09T12:22:22 EST">
           <params>
             <param index="0">
               <value>
@@ -41,7 +65,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillTheMeetingFormTest -->
-        <test-method status="PASS" signature="fillTheMeetingFormTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.automationlabs.tests.MeetingPageTest@a7e2d9d]" name="fillTheMeetingFormTest" duration-ms="5930" started-at="2020-11-02T23:59:15 EST" data-provider="getTestDataTest" finished-at="2020-11-02T23:59:21 EST">
+        <test-method status="PASS" signature="fillTheMeetingFormTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.automationlabs.tests.MeetingPageTest@60c16548]" name="fillTheMeetingFormTest" duration-ms="5941" started-at="2020-11-09T12:22:22 EST" data-provider="getTestDataTest" finished-at="2020-11-09T12:22:28 EST">
           <params>
             <param index="0">
               <value>
@@ -67,7 +91,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillTheMeetingFormTest -->
-        <test-method status="PASS" signature="fillTheMeetingFormTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.automationlabs.tests.MeetingPageTest@a7e2d9d]" name="fillTheMeetingFormTest" duration-ms="5832" started-at="2020-11-02T23:59:21 EST" data-provider="getTestDataTest" finished-at="2020-11-02T23:59:27 EST">
+        <test-method status="PASS" signature="fillTheMeetingFormTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.automationlabs.tests.MeetingPageTest@60c16548]" name="fillTheMeetingFormTest" duration-ms="5820" started-at="2020-11-09T12:22:28 EST" data-provider="getTestDataTest" finished-at="2020-11-09T12:22:34 EST">
           <params>
             <param index="0">
               <value>
@@ -93,7 +117,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillTheMeetingFormTest -->
-        <test-method status="PASS" signature="fillTheMeetingFormTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.automationlabs.tests.MeetingPageTest@a7e2d9d]" name="fillTheMeetingFormTest" duration-ms="5952" started-at="2020-11-02T23:59:27 EST" data-provider="getTestDataTest" finished-at="2020-11-02T23:59:33 EST">
+        <test-method status="PASS" signature="fillTheMeetingFormTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.automationlabs.tests.MeetingPageTest@60c16548]" name="fillTheMeetingFormTest" duration-ms="5943" started-at="2020-11-09T12:22:34 EST" data-provider="getTestDataTest" finished-at="2020-11-09T12:22:40 EST">
           <params>
             <param index="0">
               <value>
@@ -120,6 +144,6 @@
           </reporter-output>
         </test-method> <!-- fillTheMeetingFormTest -->
       </class> <!-- com.automationlabs.tests.MeetingPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Meeting Page Test -->
+  </suite> <!-- AutomationLabs Test automtion regression suite -->
 </testng-results>
