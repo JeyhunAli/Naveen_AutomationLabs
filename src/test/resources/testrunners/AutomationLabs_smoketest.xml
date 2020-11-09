@@ -7,21 +7,21 @@
 
 	<listeners>
 
-		<listener
+		<!-- <listener
 			class-name="com.automationlabs.listeners.ExtentReportListener" />
 
-	<!-- 	<listener
+		<listener
 			class-name="com.automationlabs.listeners.pdfListener" />
-
+ -->
 		<listener
 			class-name="com.automationlabs.listeners.TestAllureListener" />
 
-		<listener
+		<!-- <listener
 			class-name="com.automationlabs.listeners.TesultsListener" />
 
 		<listener
-			class-name="com.automationlabs.listeners.ScreenshotListener" /> -->
-
+			class-name="com.automationlabs.listeners.ScreenshotListener" /> 
+ -->
 
 	</listeners>
 
