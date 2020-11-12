@@ -1,17 +1,22 @@
 package com.automationlabs.utility;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebElementUtil {
@@ -502,5 +507,56 @@ public class WebElementUtil {
 		return driver.getTitle();
 
 	}
+	
+	
+	
+	////////////////////////////////////////////// Fluentwait  concept  ///////////////////////////////////////////////////////
+	
+
+	public WebElement presenceOfElementwith_FluentWait(By locator, int timeOut, int pollingSeconds) {
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(timeOut))
+				.pollingEvery(Duration.ofSeconds(pollingSeconds)).ignoring(NoSuchElementException.class)
+				.ignoring(StaleElementReferenceException.class);
+       return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+	}
+	
+
+	public WebElement visibilityOfElementwith_FluentWait(By locator, int timeOut, int pollingSeconds) {
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(timeOut))
+				.pollingEvery(Duration.ofSeconds(pollingSeconds)).ignoring(NoSuchElementException.class)
+				.ignoring(StaleElementReferenceException.class);
+       return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
+	
+
+	public String titleContainswith_FluentWait(String title, int timeOut, int pollingSeconds) {
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(timeOut))
+				.pollingEvery(Duration.ofSeconds(pollingSeconds)).ignoring(NoSuchElementException.class)
+				.ignoring(StaleElementReferenceException.class);
+		wait.until(ExpectedConditions.titleContains(title));
+		return driver.getTitle();
+	}
+	
+	
+	public Boolean textToBewith_FluentWait(By locator, String value, int timeOut, int pollingSeconds) {
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(timeOut))
+				.pollingEvery(Duration.ofSeconds(pollingSeconds)).ignoring(NoSuchElementException.class)
+				.ignoring(StaleElementReferenceException.class);
+		return wait.until(ExpectedConditions.textToBe(locator, value));
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
